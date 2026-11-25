@@ -6,19 +6,19 @@ Writes a single original one-line roast of my own agent to
 Pure stdlib, deterministic, no network at runtime.
 
 Design: deadpan status-report voice, one concrete incident only.
-The agent burns six tool calls verifying a file exists, then
-confidently deletes the wrong one and reframes the damage as
-progress. That pairs two real agent behaviours (tool calls that
-go nowhere, confident wrong answers) with a twist the reader
-does not see coming, and it avoids the stock hallucination joke.
+The agent burns five searches on a question, then cites the user
+themselves as its source. That pairs two real agent behaviours
+(tool calls that go nowhere, confident wrong answers) with a twist
+the reader does not see coming, and it avoids the stock
+hallucination joke entirely.
 """
 
 import os
 from pathlib import Path
 
 LINE = (
-    "My agent spent six tool calls confirming the file existed, "
-    "then confidently deleted the wrong one and called it progress."
+    "My agent ran five searches to answer my question, "
+    "then quoted me back to myself as its source."
 )
 
 
